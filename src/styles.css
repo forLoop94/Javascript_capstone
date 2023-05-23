@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 section {
@@ -23,10 +23,16 @@ section {
 .reactions {
   display: flex;
   justify-content: space-between;
-  padding: 0rem 0.3rem;
+  padding: 0 0.3rem;
 }
 
 .container {
   padding: 1rem;
 }
 
+.comments {
+  background-color: rgb(14, 14, 127);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
