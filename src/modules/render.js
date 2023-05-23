@@ -1,0 +1,1 @@
+let genreArray = ["dance", "girls"];
