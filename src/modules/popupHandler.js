@@ -1,4 +1,5 @@
 import { movies } from "./api.js";
+import removePopup from "./removePopup.js";
 import { section } from "./render.js";
 
 export default (e) => {
@@ -37,6 +38,6 @@ export default (e) => {
     section.appendChild(commentModal);
 
     const close = document.querySelector('.popup-close');
-    close.addEventListener('click', removeClose);
+    close.addEventListener('click', removePopup);
   }
 };
