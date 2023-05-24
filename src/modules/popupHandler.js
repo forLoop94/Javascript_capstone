@@ -35,5 +35,8 @@ export default (e) => {
     </div>`;
     commentModal.appendChild(popup);
     section.appendChild(commentModal);
+
+    const close = document.querySelector('.popup-close');
+    close.addEventListener('click', removeClose);
   }
 };
