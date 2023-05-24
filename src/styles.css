@@ -54,7 +54,7 @@ section {
   padding: 2rem;
   overflow-y: scroll;
   z-index: 1;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0 0 10px grey;
 }
 
 .popup-content {
@@ -62,7 +62,8 @@ section {
   position: relative;
 }
 
-.fa-comments, .fa-heart {
+.fa-comments,
+.fa-heart {
   color: green;
 }
 
@@ -78,7 +79,9 @@ fieldset {
   padding: 1rem;
 }
 
-fieldset button, fieldset input, fieldset textarea {
+fieldset button,
+fieldset input,
+fieldset textarea {
   padding: 0.3rem;
 }
 
@@ -97,5 +100,5 @@ fieldset button {
 }
 
 .popup-text p {
-  padding: 1rem 0rem;
+  padding: 1rem 0;
 }

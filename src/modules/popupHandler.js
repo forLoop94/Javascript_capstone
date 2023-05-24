@@ -1,6 +1,7 @@
-import { movies } from "./api.js";
-import removePopup from "./removePopup.js";
-import { section } from "./render.js";
+/* eslint-disable import/no-cycle */
+import { movies } from './api.js';
+import removePopup from './removePopup.js';
+import { section } from './render.js';
 
 export default (e) => {
   const containerId = e.target.parentNode.id;
@@ -11,15 +12,15 @@ export default (e) => {
     backdrop.className = 'backdrop';
 
     commentModal.appendChild(backdrop);
-    const popup = document.createElement("div");
-    popup.className = "comments-popup";
+    const popup = document.createElement('div');
+    popup.className = 'comments-popup';
     popup.innerHTML = `<div class="popup-content flex">
       <button class="popup-close">x</button>
       <img class="popup-image" src=${movies[containerId].show.image.medium} alt="">
       <div class="popup-text flex">
         <h3 class='movie-title'>${movies[containerId].show.name}</h3>
         <p class="popup-description">${movies[containerId].show.summary}</p>
-        
+
         <article class="comment-section">
           <header>
             <h4>Comments <span class="comment-number">(5)</span></h4>
