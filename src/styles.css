@@ -36,3 +36,45 @@ section {
   padding: 0.5rem;
   margin: 0.5rem;
 }
+
+.popup-text {
+  width: 50%;
+  flex-direction: column;
+}
+
+.comments-popup {
+  margin-top: 3rem;
+  position: fixed;
+  top: 2%;
+  left: 10%;
+  background-color: white;
+  width: 70%;
+  height: 80vh;
+  padding: 2rem;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.popup-content {
+  justify-content: space-between;
+  position: relative;
+}
+
+.fa-comments, .fa-heart {
+  color: green;
+}
+
+.popup-image {
+  height: 60vh;
+  width: 40%;
+}
+
+fieldset {
+  flex-direction: column;
+  gap: 8px;
+}
+
+fieldset button {
+  align-self: flex-start;
+  padding: 0.3rem;
+}
