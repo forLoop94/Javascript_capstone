@@ -4,9 +4,14 @@
   padding: 0;
 }
 
+body {
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+}
+
 section {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 20% 20% 20%;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem 5rem;
 }
@@ -18,6 +23,7 @@ section {
 .image {
   width: 100%;
   height: 70%;
+  border-radius: 5%;
 }
 
 .reactions {
@@ -28,6 +34,8 @@ section {
 
 .container {
   padding: 1rem;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  border-radius: 5%;
 }
 
 .comments {
