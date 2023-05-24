@@ -1,6 +1,7 @@
 import { getMovies, movies } from './api.js';
+import popupHandler from './popupHandler.js';
 
-const section = document.querySelector('section');
+export const section = document.querySelector('section');
 const genreArray = ['dance', 'girls'];
 
 export const render = async () => {
@@ -15,9 +16,7 @@ export const render = async () => {
 
     const comments = document.querySelectorAll(".comments");
     comments.forEach((comment) =>
-      comment.addEventListener("click", commentHandler)
+      comment.addEventListener("click", popupHandler)
     );
   });
 };
-
-export default render;
