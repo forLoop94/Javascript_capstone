@@ -17,8 +17,9 @@ export default (e) => {
       <button class="popup-close">x</button>
       <img class="popup-image" src=${movies[containerId].show.image.medium} alt="">
       <div class="popup-text flex">
-        <h3>${movies[containerId].show.name}</h3>
+        <h3 class='movie-title'>${movies[containerId].show.name}</h3>
         <p class="popup-description">${movies[containerId].show.summary}</p>
+        
         <article class="comment-section">
           <header>
             <h4>Comments <span class="comment-number">(5)</span></h4>

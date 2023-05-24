@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: roboto, 'Times New Roman', Times, serif;
 }
 
 section {
@@ -53,10 +54,11 @@ section {
   padding: 2rem;
   overflow-y: scroll;
   z-index: 1;
+  box-shadow: 0px 0px 10px grey;
 }
 
 .popup-content {
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
@@ -65,16 +67,35 @@ section {
 }
 
 .popup-image {
-  height: 60vh;
-  width: 40%;
+  height: 250px;
+  width: 250px;
+  margin-right: 3rem;
 }
 
 fieldset {
   flex-direction: column;
   gap: 8px;
+  padding: 1rem;
+}
+
+fieldset button, fieldset input, fieldset textarea {
+  padding: 0.3rem;
 }
 
 fieldset button {
   align-self: flex-start;
-  padding: 0.3rem;
+}
+
+.popup-close {
+  position: absolute;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.popup-text p {
+  padding: 1rem 0rem;
 }
