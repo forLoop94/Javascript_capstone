@@ -1,6 +1,8 @@
+/* eslint-disable import/no-cycle */
 import { getMovies, movies } from './api.js';
+import popupHandler from './popupHandler.js';
 
-const section = document.querySelector('section');
+export const section = document.querySelector('section');
 const genreArray = ['dance', 'girls'];
 
 export const render = async () => {
@@ -12,7 +14,8 @@ export const render = async () => {
     container.setAttribute('id', key);
     container.innerHTML = `<img class='image' src=${obj.show.image.medium} alt="${obj.show.name}"><h3>${obj.show.name}</h3><div class='reactions'><div><i id=${key} class='fa fa-heart'></i><span class='likes'>${value}</span></div><div><i class='fa fa-comments'></i><span class='likes'></span></div></div><div id=${key} class='comments'>Comments</div>`;
     section.appendChild(container);
+
+    const comments = document.querySelectorAll('.comments');
+    comments.forEach((comment) => comment.addEventListener('click', popupHandler));
   });
 };
-
-export default render;
