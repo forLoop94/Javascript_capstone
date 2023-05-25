@@ -7,7 +7,7 @@ const genreArray = ['dance', 'girls'];
 
 export const render = async () => {
   await Promise.all(genreArray.map((genre) => getMovies(genre)));
-  movies.forEach((obj, key) => {
+  movies.forEach((obj) => {
     const value = 0;
     const container = document.createElement('div');
     container.className = 'container';

@@ -4,14 +4,14 @@ import removePopup from './removePopup.js';
 import { section } from './render.js';
 
 export default (e) => {
-  for (let i = 0; i < movies.length; i++) {
+  for (let i = 0; i < movies.length; i += 1) {
     const currentMovie = movies[i];
     if (currentMovie.show.id === parseFloat(e.target.id)) {
       const commentModal = document.createElement('section');
       commentModal.className = 'comment-modal';
       const backdrop = document.createElement('div');
       backdrop.className = 'backdrop';
-  
+
       commentModal.appendChild(backdrop);
       const popup = document.createElement('div');
       popup.className = 'comments-popup';
@@ -39,7 +39,7 @@ export default (e) => {
       </div>`;
       commentModal.appendChild(popup);
       section.appendChild(commentModal);
-  
+
       const close = document.querySelector('.popup-close');
       close.addEventListener('click', removePopup);
     }
