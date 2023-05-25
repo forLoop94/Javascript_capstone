@@ -9,17 +9,14 @@ export default (e) => {
     if (currentMovie.show.id === parseFloat(e.target.id)) {
       const commentModal = document.createElement('section');
       commentModal.className = 'comment-modal';
-      const backdrop = document.createElement('div');
-      backdrop.className = 'backdrop';
 
-      commentModal.appendChild(backdrop);
       const popup = document.createElement('div');
       popup.className = 'comments-popup';
       popup.innerHTML = `<div class="popup-content flex">
         <button class="popup-close">x</button>
         <img class="popup-image" src=${currentMovie.show.image.medium} alt="">
         <div class="popup-text flex">
-          <h3 class='movie-title'>${currentMovie.show.name}</h3>
+          <h4 class='movie-title'>${currentMovie.show.name}</h4>
           <p class="popup-description">${currentMovie.show.summary}</p>
   
           <article class="comment-section">
