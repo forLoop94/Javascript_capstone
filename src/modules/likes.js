@@ -19,7 +19,6 @@ export const showLike = async () => {
 export const likes = async (e) => {
   const parent = e.target.parentNode.parentNode.parentNode;
   const parentId = parent.id;
-  console.log(parentId)
   await postLikes(parentId);
   showLike();
 };
