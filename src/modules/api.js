@@ -1,5 +1,5 @@
 export const movies = [];
-const likesApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/gYjYUUCAId6NwpSI21t7/likes';
+const likesApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/likes';
 export const getMovies = async (genre) => {
   try {
     const res = await fetch(`https://api.tvmaze.com/search/shows?q=${genre}`);
