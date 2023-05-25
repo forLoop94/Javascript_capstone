@@ -8,7 +8,7 @@ const genreArray = ['dance', 'girls'];
 
 export const render = async () => {
   await Promise.all(genreArray.map((genre) => getMovies(genre)));
-  movies.forEach((obj, key) => {
+  movies.forEach((obj) => {
     const value = 0;
     const container = document.createElement('div');
     container.className = 'container';
@@ -16,7 +16,7 @@ export const render = async () => {
     container.innerHTML = `<img class='image' src=${obj.show.image.medium} alt="${obj.show.name}"><h3>${obj.show.name}</h3><div class='reactions'><div><i id=${obj.show.id} class='fa fa-heart'></i><span class='likes' id=${obj.show.id}>${value}</span></div><div><i class='fa fa-comments'></i><span class='comments'></span></div></div><div id=${key} class='comments'>Comments</div>`;
     showLike();
     section.appendChild(container);
-
+    
     const hearts = document.querySelectorAll('.fa-heart');
     hearts.forEach((heart) => {
       heart.addEventListener('click', likes);
