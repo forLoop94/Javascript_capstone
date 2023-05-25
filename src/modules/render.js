@@ -13,10 +13,10 @@ export const render = async () => {
     const container = document.createElement('div');
     container.className = 'container';
     container.setAttribute('id', obj.show.id);
-    container.innerHTML = `<img class='image' src=${obj.show.image.medium} alt="${obj.show.name}"><h3>${obj.show.name}</h3><div class='reactions'><div><i id=${obj.show.id} class='fa fa-heart'></i><span class='likes' id=${obj.show.id}>${value}</span></div><div><i class='fa fa-comments'></i><span class='comments'></span></div></div><div id=${key} class='comments'>Comments</div>`;
+    container.innerHTML = `<img class='image' src=${obj.show.image.medium} alt="${obj.show.name}"><h3>${obj.show.name}</h3><div class='reactions'><div><i id=${obj.show.id} class='fa fa-heart'></i><span class='likes' id=${obj.show.id}>${value}</span></div><div><i class='fa fa-comments'></i><span class='comments'></span></div></div><div id=${obj.show.id} class='comments'>Comments</div>`;
     showLike();
     section.appendChild(container);
-    
+
     const hearts = document.querySelectorAll('.fa-heart');
     hearts.forEach((heart) => {
       heart.addEventListener('click', likes);
