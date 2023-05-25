@@ -6,15 +6,16 @@
 }
 
 body {
-  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  background: linear-gradient(270deg, #1cb5e0 0%, #000851 100%);
 }
 
 section {
   display: grid;
-  grid-template-columns: 20% 20% 20%;
+  grid-template-columns: auto auto auto;
   justify-content: center;
   gap: 1rem;
   padding: 1rem 5rem;
+  min-width: 700px;
 }
 
 .flex {
@@ -51,18 +52,27 @@ section {
   flex-direction: column;
 }
 
-.comments-popup {
-  margin-top: 3rem;
+.comment-modal {
+  background-color: rgb(0, 0, 0, 0.7);
   position: fixed;
-  top: 2%;
-  left: 10%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-popup {
   background-color: white;
   width: 70%;
   height: 80vh;
   padding: 2rem;
   overflow-y: scroll;
   z-index: 1;
-  box-shadow: 0 0 10px grey;
+  box-shadow: 0px 0px 10px white;
 }
 
 .popup-content {
