@@ -3,17 +3,18 @@ import { movies } from './api.js';
 import removePopup from './removePopup.js';
 import { section } from './render.js';
 
-const postComment = async (id,username,userComment) =>{
-  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/comments?item_id=${id}`,{
-    method:'POST',
+const postComment = async (id, username, userComment) => {
+  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/comments?item_id=${id}`, {
+    method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       item_id: id,
-      username: username,
+      username,
       comment: userComment,
-    })
-  })
-}
+    }),
+  });
+  return res;
+};
 
 const getComment = async (id) => {
   try {
@@ -25,21 +26,19 @@ const getComment = async (id) => {
   }
 };
 
-const display = async(id)=>{
-  const displayComments = document.querySelector('.comments-display')
-  
- 
-  let commentList = await getComment(id);
-  displayComments.innerHTML = "";
-  if(Array.isArray(commentList)){
-    commentList.forEach((element) => {
-      displayComments.innerHTML+=`<p>${element.username} ${element.creation_date} ${element.comment}</p>`                   
-  }); 
-  } else {
-    displayComments.innerHTML= `no comment available`
-  }
-}
+const display = async (id) => {
+  const displayComments = document.querySelector('.comments-display');
 
+  const commentList = await getComment(id);
+  displayComments.innerHTML = '';
+  if (Array.isArray(commentList)) {
+    commentList.forEach((element) => {
+      displayComments.innerHTML += `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
+    });
+  } else {
+    displayComments.innerHTML = 'no comment available';
+  }
+};
 
 export default (e) => {
   for (let i = 0; i < movies.length; i += 1) {
@@ -80,18 +79,18 @@ export default (e) => {
 
       const addCommentBtn = document.querySelector('.add-comment');
 
-      const addComment = async(e)=>{
-        e.preventDefault()
-        let userName= e.target.parentNode.children[1]
-        let userComment= e.target.parentNode.children[2]
-        if (userName.value.trim()!=='' && userComment.value.trim()!==''){
-          await postComment(currentMovie.show.id,userName.value,userComment.value)
-          await display(currentMovie.show.id)
-          userName.value = "";
-          userComment.value = "";
+      const addComment = async (e) => {
+        e.preventDefault();
+        const userName = e.target.parentNode.children[1];
+        const userComment = e.target.parentNode.children[2];
+        if (userName.value.trim() !== '' && userComment.value.trim() !== '') {
+          await postComment(currentMovie.show.id, userName.value, userComment.value);
+          await display(currentMovie.show.id);
+          userName.value = '';
+          userComment.value = '';
         }
-      }
-      addCommentBtn.addEventListener('click', addComment)
+      };
+      addCommentBtn.addEventListener('click', addComment);
       display(currentMovie.show.id);
     }
   }

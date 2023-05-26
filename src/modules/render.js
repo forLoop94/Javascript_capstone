@@ -4,7 +4,7 @@ import popupHandler from './popupHandler.js';
 import { likes, showLike } from './likes.js';
 
 export const section = document.querySelector('section');
-const genreArray = ['dance', 'girls'];
+const genreArray = ['comedy', 'blood'];
 
 export const render = async () => {
   await Promise.all(genreArray.map((genre) => getMovies(genre)));
