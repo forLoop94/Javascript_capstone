@@ -15,6 +15,16 @@ const postComment = async (id,username,userComment) =>{
   })
 }
 
+const getComment = async (id) => {
+  try {
+    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/comments?item_id=${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return 'no comment';
+  }
+};
+
 export default (e) => {
   for (let i = 0; i < movies.length; i += 1) {
     const currentMovie = movies[i];
