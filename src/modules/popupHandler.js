@@ -2,6 +2,7 @@
 import { movies } from './api.js';
 import removePopup from './removePopup.js';
 import { section } from './render.js';
+import commentsCounter from './commentsCounter.js';
 
 const postComment = async (id, username, userComment) => {
   const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/comments?item_id=${id}`, {
@@ -35,8 +36,10 @@ const display = async (id) => {
     commentList.forEach((element) => {
       displayComments.innerHTML += `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
     });
+    commentsCounter(commentList);
   } else {
     displayComments.innerHTML = 'no comment available';
+    commentsCounter([]);
   }
 };
 
@@ -57,7 +60,7 @@ export default (e) => {
           <p class="popup-description">${currentMovie.show.summary}</p>
   
           <article class="comment-section">
-              <h4>Comments <span class="comment-number">(5)</span></h4>
+              <h4>Comments (<span class="comment-number">0</span>)</h4>
               <div class="comments-display"></div>
           </article>
           <form action="#">
