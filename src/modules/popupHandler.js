@@ -57,10 +57,8 @@ export default (e) => {
           <p class="popup-description">${currentMovie.show.summary}</p>
   
           <article class="comment-section">
-            <header>
               <h4>Comments <span class="comment-number">(5)</span></h4>
               <div class="comments-display"></div>
-            </header>
           </article>
           <form action="#">
             <fieldset class="flex"><legend>Add Comment</legend>
