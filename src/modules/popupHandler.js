@@ -77,6 +77,20 @@ export default (e) => {
 
       const close = document.querySelector('.popup-close');
       close.addEventListener('click', removePopup);
+
+      const addComment = async(e)=>{
+        e.preventDefault()
+        let userName= e.target.parentNode.children[1]
+        let userComment= e.target.parentNode.children[2]
+        if (userName.value.trim()!=='' && userComment.value.trim()!==''){
+          await postComment(currentMovie.show.id,userName.value,userComment.value)
+          await display(currentMovie.show.id)
+          userName.value = "";
+          userComment.value = "";
+        }
+      }
+      form.addEventListener('click', addComment)
+      display(currentMovie.show.id);
     }
   }
 };
