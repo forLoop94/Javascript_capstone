@@ -36,10 +36,10 @@ const display = async (id) => {
     commentList.forEach((element) => {
       displayComments.innerHTML += `<p>${element.creation_date} ${element.username}: ${element.comment}</p>`;
     });
-    console.log(commentsCounter(commentList))
+    commentsCounter(commentList);
   } else {
     displayComments.innerHTML = 'no comment available';
-    console.log(commentsCounter([]));
+    commentsCounter([]);
   }
 };
 
