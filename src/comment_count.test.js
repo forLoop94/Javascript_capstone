@@ -10,7 +10,7 @@ describe('Comment_count', () => {
   test('commentcountWhenCommentArrayIsnotEmpty', () => {
     expect(commentCount([
       { comment: 'So scary', creation_date: '2023-05-24', username: 'Clinton' },
-      { comment: 'Cool movie', creation_date: '2023-05-24', username: 'Charles' }
+      { comment: 'Cool movie', creation_date: '2023-05-24', username: 'Charles' },
     ])).toBe(2);
   });
 });
