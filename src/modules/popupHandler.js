@@ -25,6 +25,16 @@ const getComment = async (id) => {
   }
 };
 
+const display = async(id)=>{
+  const displayComments = document.querySelector('.comments-display')
+  let commentList = await getComment(id);
+  displayComments.innerHTML = ""
+  commentList.forEach((element) => {
+    displayComments.innerHTML+=`<p>${element.username} ${element.creation_date} ${element.comment}</p>`                   
+  }); 
+  }
+
+
 export default (e) => {
   for (let i = 0; i < movies.length; i += 1) {
     const currentMovie = movies[i];
