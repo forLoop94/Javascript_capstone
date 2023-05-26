@@ -3,6 +3,18 @@ import { movies } from './api.js';
 import removePopup from './removePopup.js';
 import { section } from './render.js';
 
+const postComment = async (id,username,userComment) =>{
+  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VGTpDpe0cMD7twV9xCen/comments?item_id=${id}`,{
+    method:'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      item_id: id,
+      username: username,
+      comment: userComment,
+    })
+  })
+}
+
 export default (e) => {
   for (let i = 0; i < movies.length; i += 1) {
     const currentMovie = movies[i];
