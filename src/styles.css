@@ -156,3 +156,9 @@ fieldset button {
 .comments-display {
   color: black;
 }
+
+.footer {
+  margin: 0.8rem 0;
+  justify-content: center;
+  color: white;
+}
