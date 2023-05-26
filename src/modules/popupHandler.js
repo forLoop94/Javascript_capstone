@@ -67,7 +67,7 @@ export default (e) => {
             <fieldset class="flex"><legend>Add Comment</legend>
               <input type="text" placeholder="Your name">
               <textarea name="comment" id="comments" cols="20" rows="5" placeholder="Your comment"></textarea>
-              <button type="submit">Submit</button>
+              <button class='add-comment' type="submit">Submit</button>
             </fieldset>
           </form>
         </div>
@@ -77,6 +77,8 @@ export default (e) => {
 
       const close = document.querySelector('.popup-close');
       close.addEventListener('click', removePopup);
+
+      const addCommentBtn = document.querySelector('.add-comment');
 
       const addComment = async(e)=>{
         e.preventDefault()
@@ -89,7 +91,7 @@ export default (e) => {
           userComment.value = "";
         }
       }
-      form.addEventListener('click', addComment)
+      addCommentBtn.addEventListener('click', addComment)
       display(currentMovie.show.id);
     }
   }
