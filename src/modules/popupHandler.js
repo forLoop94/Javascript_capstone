@@ -27,12 +27,18 @@ const getComment = async (id) => {
 
 const display = async(id)=>{
   const displayComments = document.querySelector('.comments-display')
+  
+ 
   let commentList = await getComment(id);
-  displayComments.innerHTML = ""
-  commentList.forEach((element) => {
-    displayComments.innerHTML+=`<p>${element.username} ${element.creation_date} ${element.comment}</p>`                   
+  displayComments.innerHTML = "";
+  if(Array.isArray(commentList)){
+    commentList.forEach((element) => {
+      displayComments.innerHTML+=`<p>${element.username} ${element.creation_date} ${element.comment}</p>`                   
   }); 
+  } else {
+    displayComments.innerHTML= `no comment available`
   }
+}
 
 
 export default (e) => {
