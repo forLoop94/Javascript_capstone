@@ -9,6 +9,28 @@ body {
   background: linear-gradient(270deg, #1cb5e0 0%, #000851 100%);
 }
 
+header {
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 1rem auto;
+  color: white;
+}
+
+.movie-div {
+  gap: 8px;
+  align-items: center;
+}
+
+.movie-count {
+  font-size: 1em;
+}
+
+#search {
+  padding: 5px;
+  border-radius: 5px;
+}
+
 section {
   display: grid;
   grid-template-columns: 300px 300px 300px;
@@ -16,7 +38,6 @@ section {
   gap: 1rem;
   padding: 2rem;
   min-width: 700px;
-  overflow-x: scroll;
 }
 
 .flex {
@@ -130,4 +151,8 @@ fieldset button {
 
 .popup-text p {
   padding: 1rem 0;
+}
+
+.comments-display {
+  color: black;
 }
