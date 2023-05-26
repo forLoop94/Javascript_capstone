@@ -34,34 +34,28 @@
 
 
 
-# 📖 [BESTHOLLYWOODMOVIES] <a name="about-project"></a>
+# 📖 BESTHOLLYWOODMOVIES <a name="about-project"></a>
 
-**[BESTHOLLYWOODMOVIES]** - This is a project that allows the user to enter name and score.
+**BEST HOLLYWOOD MOVIES** is an app that displays movies for users. Each displayed movie has a pop-up that gives further information about the movie. You can like and leave a comment on any movie. The movie will be fetched from the TVmaze API the reactions will be stored and displayed by the Involvement API.
 
-## 🛠 Built With <a name="built-with">HTML,CSS & Javascript</a>
+## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="">HTML,CSS & JAVASCRIPT</a></li>
-  </ul>
-</details>
-
-
+- HTML
+- CSS
+- Javascript
+- Webpack
+- APIs
 
 
 ### Key Features <a name="key-features"></a>
 
-
-- **[using javascript to render dynamically list of movies]**
-- **[using webpack bundler for bundling files]**
-- **[using involvement api to giv user interaction with adding comment and giving likes]**
-- **[using TVMAZE api]**
-- **[Add styles to the page to improve UI]**
+- **using javascript to render dynamically list of movies**
+- **using webpack bundler for bundling files**
+- **using involvement api to track user interactions**
+- **using TVMAZE api**
+- **Strong UI**
 
 
 
@@ -71,10 +65,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- <a href="https://forloop94.github.io/Javascript_capstone/">live demo</a>
+- <a href="https://drive.google.com/file/d/1W5SwAlxCkdP-oOIW02QIx4IC60A3a9e1/view?usp=sharing">Walkthrough video</a>
 
-
-- [Live Demo Link] (https://forloop94.github.io/Javascript_capstone/)
-- [walk through video] (https://drive.google.com/file/d/1W5SwAlxCkdP-oOIW02QIx4IC60A3a9e1/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,11 +175,6 @@ If you like this project you can recommend to your friend, family and colleagues
 
 
 **I would like to thank microverse for guiding and providing with all great material to do my projects and thank my coding partners who helped**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
