@@ -2,10 +2,10 @@
 import { getMovies, movies } from './api.js';
 import popupHandler from './popupHandler.js';
 import { likes, showLike } from './likes.js';
-import movieCounter  from './movieCounter.js';
+import movieCounter from './movieCounter.js';
 
 export const section = document.querySelector('section');
-const genreArray = ['comedy', 'blood'];
+const genreArray = ['boys'];
 
 export const render = async () => {
   await Promise.all(genreArray.map((genre) => getMovies(genre)));
