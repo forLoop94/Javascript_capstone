@@ -88,6 +88,7 @@ h3 {
 .popup-text {
   width: 50%;
   flex-direction: column;
+  gap: 10px;
 }
 
 .comment-modal {
