@@ -114,8 +114,15 @@ h3 {
 }
 
 .popup-content {
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
   position: relative;
+}
+
+.movie-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
 }
 
 .fa-comments,
@@ -125,7 +132,7 @@ h3 {
 
 .popup-image {
   height: 250px;
-  width: 250px;
+  width: 350px;
   margin-right: 3rem;
 }
 
