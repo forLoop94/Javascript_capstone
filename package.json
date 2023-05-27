@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21"
   }
 }
