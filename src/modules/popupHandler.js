@@ -57,7 +57,7 @@ export default (e) => {
         <img class="popup-image" src=${currentMovie.show.image.medium} alt="">
         <div class="popup-text flex">
           <h4 class='movie-title'>${currentMovie.show.name}</h4>
-          <p class="popup-description">${currentMovie.show.summary}</p>
+          ${currentMovie.show.summary}
   
           <article class="comment-section">
               <h4>Comments (<span class="comment-number">0</span>)</h4>
